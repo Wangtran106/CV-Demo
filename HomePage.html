@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV-Demo</title>
+    <link rel="stylesheet" href="HomePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="head1">
+        <div class="head1con1">
+            <h2 id="home">Wang.</h2>
+
+        </div>
+        <div class="head1con2">
+            <p><a href="#home">Home</a></p>
+            <p><a href="#aboutme">About me</a></p>
+            <p><a href="#contact">Contact</a></p>
+        </div>
+    </div>
+    <div class="head1con1chau1">
+        <p style="margin-bottom: 8px;">Embedded System Engineering</p>
+        <h1 class="head1con1chau1chat1">Hi,I'm <span class="color">Quang</span></h1>
+        <h1 class="head1con1chau1chat1">Tran Dinh From VietNam</h1>
+    </div>
+    <div class="aboutme" id="aboutme">
+        <div class="img"></div>
+        <div class="infor">
+            <h1>About me</h1>
+            <p>My name is Tran Dinh Quang, and I am a student at Da Nang University of Science and Technology, majoring in Embedded Systems and IoT. I am passionate about technology and enjoy spending time listening to music, watching movies, reading novels, and exploring new technologies. I am a curious and dedicated individual who is always looking for opportunities to expand my knowledge and skills.</p>
+            <!-- Thanh tab -->
+            <div class="tabs">
+                <!-- Tab "Experience" -->
+                <div class="tab" data-tab="experience">Experience</div>
+                <!-- Tab "Skill" -->
+                <div class="tab active" data-tab="skill">Skill</div>
+                <!-- Tab "Education" -->
+                <div class="tab" data-tab="education">Education</div>
+            </div>
+
+            <!-- Nội dung cho tab "Skill" -->
+            <div class="content" data-tab="skill">
+                <div class="parent">
+                    <div class="child1">
+                        <div class="word">HTML/CSS <span class="span1">45%</span></div>
+                        <div class="loading">
+                            <div class="loadingbar"></div>
+                        </div>
+                    </div>
+                    <div class="child2">
+                        <div class="word">C++ <span class="span2" >30%</span></div>
+                        <div class="loading">
+                            <div class="loadingbar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="parent1">
+                    <div class="child1">
+                        <div class="word">Arduino<span class="span3" >20%</span></div>
+                        <div class="loading">
+                            <div class="loadingbar"></div>
+                        </div>
+                    </div>
+                    <div class="child2">
+                        <div class="word">JavaScript<span class="span4" >9%</span></div>
+                        <div class="loading">
+                            <div class="loadingbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nội dung cho tab "Experience" -->
+            <div class="content" data-tab="experience">
+                <ul>
+                    <li>DEC 2022 : Maze Runner</li>
+                    <li>Current : Updating...</li>
+                </ul>
+            </div>
+            <!-- Nội dung cho tab "Education" -->
+            <div class="content" data-tab="education">
+
+                <div>                
+                    <ul>
+                        Da Nang University of Science and Technology
+                        <li>
+                            Majoring in Embedded Systems And IoT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <script>
+                // Lấy tất cả các tab và nội dung
+                const tabs = document.querySelectorAll('.tab');
+                const contents = document.querySelectorAll('.content');
+
+                // Gắn sự kiện khi click vào tab
+                tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Loại bỏ class active khỏi tất cả các tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Thêm class active cho tab đang được chọn
+                    tab.classList.add('active');
+
+                    // Lấy tên của tab đang được chọn
+                    const tabName = tab.getAttribute('data-tab');
+                    
+                    // Ẩn tất cả các nội dung
+                    contents.forEach(content => {
+                    content.style.display = 'none';
+                    // Hiển thị nội dung khi tên tab trùng khớp với tên của nội dung
+                    if (content.getAttribute('data-tab') === tabName) {
+                        content.style.display = 'block';
+                    }
+                    });
+                });
+                });
+            </script>          
+        </div>
+    </div>
+    <div class="MyService">
+        <div>
+            <h1>My Service</h1>
+        </div>
+
+        <div class="Services">
+            <div class="Services1">
+                <div class="icon1">
+                    <i class="fa-sharp fa-regular fa-code" style="font-weight: 900;"></i>
+                </div>
+                
+                <h2>Web Development</h2>
+                <p class="chu">Experienced in crafting dynamic and user-centric web solutions.</p>
+            </div>
+
+            <div class="Services2">
+                <div class="icon1"> 
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h2>Sofware</h2>
+                <p class="chu">Updating...</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="end">
+        <div class="Contact" id="contact">
+            <h1>Contact Me</h1>
+            <div class="mail">
+                <i class="fa-sharp fa-solid fa-paper-plane" ><span class="bin">trandinhquang011@gmail.com</span></i>
+                <i class="fas fa-sharp fa-solid fa-square-phone" ><span class="bin">0359986964</span></i>
+            </div>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=100061459552110"><i class="fa-brands fa-facebook" ></i></a>
+                <a href="https://www.tiktok.com/@tran_quang142857"><i class="fa-brands fa-tiktok" ></i></a>
+                <a href="https://www.instagram.com/wang10_6/"><i class="fa-brands fa-instagram" ></i></a>
+            </div>
+        </div>
+        <form >
+            <h1>Feedback</h1>
+            <div class="text">
+                <input type="text" placeholder="Your Name" required></div>
+            <div class="email">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="message">
+                <textarea id="message" placeholder="Your Message" required></textarea>
+            </div>
+            
+            <div class="submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

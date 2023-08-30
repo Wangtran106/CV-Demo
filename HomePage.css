@@ -1,0 +1,716 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.15752-9/272947040_1396046437516482_5864587040969934843_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=mRrpjElMW14AX8o3Lgm&_nc_ht=scontent.fsgn2-3.fna&oh=03_AdTgsCVOCaUkjfqWIl1x-GJOfBse0jhvxcecyL5I7CNA_g&oe=650A8FE1) no-repeat ;
+    background-size: 750px ;
+    background-color: black;
+    background-position: top 0px right 40px;
+    color: white;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: red;
+}
+.head1{
+    display: flex;
+    justify-content: space-between;
+}
+.head1 h2{
+    margin-left: 100px;
+    font-size: 30px;
+}
+.head1 h2::first-letter{
+    color:red;
+    font-size: 2.3rem;
+
+}
+.head1con1{
+    display: flex;
+    flex-direction: column;
+}
+.head1con1chau1{
+    float: left;
+    margin-left: 100px;
+    margin-top: 200px;
+    font-size: 20px;
+}
+.head1con2{
+    margin: 10px;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+.color{
+    color: red;
+}
+.head1con1chau1chat1{
+    margin: 0px;
+}
+.aboutme{
+    margin-top: 800px;
+    margin-left: 100px;
+    width: 1000px;
+    height: 350px;
+    display: flex;
+}
+.img{
+    background: url(https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.15752-9/367513697_3482320305415348_1478558294689278772_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=aMvHIaA-nvwAX-mfKaS&_nc_ht=scontent.fsgn2-4.fna&oh=03_AdT8OFcM0V30mIaDs_WWtskFUGWC-C8xCEeyoP7C3cYwqA&oe=65095BC4)no-repeat ;
+    background-size: cover;
+    background-position: top 0px center;
+    width: 300px;
+    height: 350px;
+    margin-right: 10px;
+}
+.infor{
+    width: 60%;
+    align-content: flex-start;
+}
+.aboutme h1{
+    font-size: 55px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0;
+}
+.aboutme p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+  /* Tạo thanh tab */
+  .tabs {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    width: 300px;
+    margin: 0 10px;
+  }
+
+  /* Giao diện cho mỗi tab */
+  .tab {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding-bottom: 2px; /* Khoảng cách giữa chữ và gạch chân */
+    transition: padding-bottom 0.3s ease; /* Hiệu ứng chuyển động */
+  }
+  .tab::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Độ dày của gạch chân */
+    background-color: red; /* Màu của gạch chân */
+    transform: scaleX(0); /* Ban đầu không có gạch chân */
+    transform-origin: bottom left;
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động */
+  }
+  
+  .tab:hover {
+    padding-bottom: 5px; /* Khi di chuột vào, tăng khoảng cách */
+  }
+  
+  .tab:hover::before {
+    transform: scaleX(1); /* Khi di chuột vào, hiện gạch chân */
+  }
+
+  /* Giao diện cho nội dung */
+  .content {
+    display: none; /* Ẩn nội dung ban đầu */
+    padding: 5px;
+    width: 500px;
+    height:150px;
+    margin:0px;
+    border: none; /* Loại bỏ viền */
+  }
+
+  /* Giao diện cho tab đang được chọn */
+  .tab.active {
+    color: red;
+  }
+
+  /* Hiển thị nội dung khi tab được chọn */
+  .tab.active + .content {
+    display: block;
+  }
+li{
+    margin-left: 25px;
+}
+.parent{
+    width: 45%;
+    height: 150px;
+    float: left;
+}
+.parent1{
+    width: 45%;
+    height: 150px;
+    float: right;
+}
+.loading{
+    background-color: gray;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+}
+.loadingbar{
+    background-color: red;
+}
+.child1{
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.child2{
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.word{
+    color: grey;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.parent .child1 .loadingbar{
+    background-color: red;
+    width: 45%;
+    height: 5px;
+    border-radius: 10px;
+}
+.parent .child2 .loadingbar{
+    background-color: yellow;
+    width: 30%;
+    height: 5px;
+    border-radius: 10px;
+}
+.parent1 .child1 .loadingbar{
+    background-color: rgb(223, 2, 223);
+    width: 20%;
+    height: 5px;
+    border-radius: 10px;
+}
+.parent1 .child2 .loadingbar{
+    background-color: blue;
+    width: 9%;
+    height: 5px;
+    border-radius: 10px;
+}
+.span1{
+    font-size: 10px;
+    margin-left: 136px;
+}
+.span2{
+    font-size: 10px;
+    margin-left: 175px;
+}
+.span3{
+    font-size: 10px;
+    margin-left: 160px;
+}
+.span4{
+    font-size: 10px;
+    margin-left: 156px;
+
+}
+.MyService{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 950px;
+    height: 350px;
+}
+.icon1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.MyService h1{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+.Services{
+    width: 650px;
+    height: 300px;
+    display:flex ;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.Services1{
+    background-color: rgb(31, 30, 30);
+    width: 240px;
+    height: 190px;
+    padding: 30px;
+    border-radius: 10px;
+}
+.Services1:hover{
+    color: red;
+    box-shadow: 0px 0px 7px gray;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 2px solid red;
+}
+.Services2{
+    background-color: rgb(31, 30, 30);
+    width: 240px;
+    height: 190px;
+    padding: 30px;
+    border-radius: 10px;
+}
+.Services2:hover{
+    color: red;
+    box-shadow: 0px 0px 7px gray;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: 2px solid red;
+}
+.chu{
+    font-size: 13px;
+    color: rgb(192, 192, 192);
+}
+/* Phần Cuối Web */
+.end{
+    margin-left: 100px;
+    width: 1300px;
+    height: 65vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+}
+/* PHẦN CONTACT BÊN TRÁI */
+.Contact{
+    width: 400px;
+    flex-direction: column;
+}
+.Contact h1{
+    font-size:  40px;
+}
+.mail{
+    width: 350px;
+    height:80px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.mail .fas{
+    margin-top: 20px;
+}
+.icon{
+    width: 100px;
+    height:30px;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    font-size: 20px;
+}
+.bin{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 20px;
+    font-weight: normal;
+    color: white;
+    font-size: 15px ;
+}
+.mail .fa-sharp{
+    color: red;
+}
+.fa-brands:hover{
+    color: red;
+    cursor: pointer;
+}
+/* PHẦN FEEDBACK BÊN PHẢI */
+form{
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+} 
+input::placeholder,
+textarea::placeholder{
+   color: rgb(179, 179, 179);
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input,
+textarea{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    color: white;
+    background-color: rgb(68, 67, 67);
+    width: 700px;
+    height:25px;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    padding:10px;
+    border: 2px solid red;
+    border-radius: 10px 0px 0px 0px;
+}
+.message textarea{
+    height: 100px;
+}
+button{
+    color: white;
+    width: 90px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 331.655px ;
+    background-color: black;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px red;
+}
+button:hover{
+    margin-top: 15px ;
+    background-color: red;
+}
+/* Độ Phân Giải Màn Hình */
+/* CSS hiện tại */
+
+/* Thêm media query cho màn hình có độ rộng nhỏ hơn 768px */
+@media (max-width: 480px) {
+    body{
+        margin: 0;
+        padding: 0;
+        background: url(https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.15752-9/272947040_1396046437516482_5864587040969934843_n.png?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=mRrpjElMW14AX8o3Lgm&_nc_ht=scontent.fsgn2-3.fna&oh=03_AdTgsCVOCaUkjfqWIl1x-GJOfBse0jhvxcecyL5I7CNA_g&oe=650A8FE1) no-repeat ;
+        background-size: 1000px ;
+        background-color: black;
+        background-position: top 600px left 900px ;
+        color: white;
+        height: 100vh;
+    }
+    .head1{
+        /* cố định width */
+        width: 1440px; 
+        height: 300px;
+    }
+    .head1 h2{
+        margin-left: 100px;
+        font-size: 125px;
+    }
+    .head1 h2::first-letter{
+        color:red;
+        font-size: 150px;
+    
+    }
+    .head1con1chau1{
+        width: 800px;
+        height: 320px;
+        margin-top: 600px;
+        margin-left: 100px;
+        margin-bottom: 1000px;
+        font-size: 60px;
+    }
+    .head1con2{
+        font-size: 50px;
+        margin-top: 137px;
+        width: 700px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .head1con1{
+        width: 900px;
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutme{
+        margin-top: 200px;
+        margin-left: 50px;
+        margin-bottom: 300px;
+        width: 1500px;
+        height: 750px;
+        display: flex;
+    }
+    .img{
+        background: url(https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.15752-9/367513697_3482320305415348_1478558294689278772_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=aMvHIaA-nvwAX-mfKaS&_nc_ht=scontent.fsgn2-4.fna&oh=03_AdT8OFcM0V30mIaDs_WWtskFUGWC-C8xCEeyoP7C3cYwqA&oe=65095BC4)no-repeat ;
+        background-size: cover;
+        background-position: top 0px center;
+        width: 420px;
+        height: 700px;
+        margin-right: 5px;
+        
+    }
+    .aboutme h1{
+        font-size: 80px;
+        font-family: 'Times New Roman', Times, serif;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .aboutme p{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 40px;
+    }
+    .tabs {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        width: 300px;
+        margin: 0 75px;
+        font-size: 35px;
+    }
+    .content {
+        display: none; /* Ẩn nội dung ban đầu */
+        padding: 5px;
+        width: 850px;
+        height:170px;
+        margin:10px;
+        border: none; /* Loại bỏ viền */
+    }
+    ul{
+        font-size: 30px;
+    }
+    .word{
+        color: grey;
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    .parent .child1 .loadingbar{
+        background-color: red;
+        width: 45%;
+        height: 10px;
+        border-radius: 10px;
+    }
+    .parent .child2 .loadingbar{
+        background-color: yellow;
+        width: 30%;
+        height: 10px;
+        border-radius: 10px;
+    }
+    .parent1 .child1 .loadingbar{
+        background-color: rgb(223, 2, 223);
+        width: 20%;
+        height: 10px;
+        border-radius: 10px;
+    }
+    .parent1 .child2 .loadingbar{
+        background-color: blue;
+        width: 9%;
+        height: 10px;
+        border-radius: 10px;
+    }
+    .loading{
+        background-color: gray;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+    }
+    .span1{
+        font-size: 25px;
+        margin-left: 197px;
+    }
+    .span2{
+        font-size: 25px;
+        margin-left: 275px;
+    }
+    .span3{
+        font-size: 25px;
+        margin-left: 240px;
+    }
+    .span4{
+        font-size: 25px;
+        margin-left: 240px;
+    }
+      /* Giao diện cho mỗi tab */
+  .tab {
+        padding: 10px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        padding-bottom: 4px; /* Khoảng cách giữa chữ và gạch chân */
+        transition: padding-bottom 0.3s ease; /* Hiệu ứng chuyển động */
+    }
+  .tab::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px; /* Độ dày của gạch chân */
+        background-color: red; /* Màu của gạch chân */
+        transform: scaleX(0); /* Ban đầu không có gạch chân */
+        transform-origin: bottom left;
+        transition: transform 0.3s ease; /* Hiệu ứng chuyển động */
+    }
+  
+  .tab:hover {
+    padding-bottom: 10px; /* Khi di chuột vào, tăng khoảng cách */
+  }
+  
+  .tab:hover::before {
+    transform: scaleX(1); /* Khi di chuột vào, hiện gạch chân */
+  }
+  /* Giao diện cho tab đang được chọn */
+  .tab.active {
+    color: red;
+  }
+
+  /* Hiển thị nội dung khi tab được chọn */
+  .tab.active + .content {
+    display: block;
+  }
+    .MyService{
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 100px;
+        margin-top: 100px;
+        width: 1265px;
+        height: 555px;
+    }
+    .MyService h1{
+        font-size: 80px;
+        margin-bottom: 0;
+    }
+    .chu{
+        font-size: 30px;
+        color: rgb(192, 192, 192);
+    }
+    .Services1 h2{
+        font-size: 35px;
+    }
+    .Services2 h2{
+        font-size: 35px;
+    }
+    .Services{
+        width: 1257px;
+        height: 460px;
+        display:flex ;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .Services1{
+        background-color: rgb(31, 30, 30);
+        width: 480px;
+        height: 230px;
+        padding: 60px;
+        border-radius: 10px;
+    }
+    .icon1{
+        font-size: 50px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+    .Services1:hover{
+        color: red;
+        box-shadow: 0px 0px 7px gray;
+        margin-bottom: 20px;
+        cursor: pointer;
+        border: 2px solid red;
+    }
+    .Services2{
+        background-color: rgb(31, 30, 30);
+        width: 480px;
+        height: 230px;
+        padding: 60px;
+        border-radius: 10px;
+    }
+    .Services2:hover{
+        color: red;
+        box-shadow: 0px 0px 7px gray;
+        margin-bottom: 20px;
+        cursor: pointer;
+        border: 2px solid red;
+    }
+    /* Phần Cuối Web */
+    .end{
+        margin-left: 100px;
+        width: 1300px;
+        height: 800px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 500px;
+    }
+    /* PHẦN CONTACT BÊN TRÁI */
+    .Contact{
+        width: 600px;
+        height: 360px;
+        flex-direction: column;
+    }
+    .Contact h1{
+        font-size:  80px;
+    }
+    .mail{
+        width: 585px;
+        height:100px;
+        display: flex;
+        flex-direction: column;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .mail .fas{
+        margin-top: 20px;
+    }
+    .icon{
+        width: 220px;
+        height:118px;
+        display: flex;
+        justify-content:space-between ;
+        align-items: center;
+        font-size: 40px;
+    }
+    .bin{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left: 20px;
+        font-weight: normal;
+        color: white;
+        font-size: 30px ;
+    }
+    .mail .fa-sharp{
+        color: red;
+    }
+    .fa-brands:hover{
+        color: red;
+        cursor: pointer;
+    }
+    /* PHẦN FEEDBACK BÊN PHẢI */
+    form{
+        height:1000px ;
+        width: 750px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+    } 
+    form h1{
+        font-size: 80px;
+        margin-bottom: 10px;
+    }
+    input::placeholder,
+    textarea::placeholder{
+    color: rgb(179, 179, 179);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    input,
+    textarea{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        color: white;
+        background-color: rgb(68, 67, 67);
+        width: 1090px;
+        height:90px;
+        margin-top: 20px;
+        margin-bottom: 7px;
+        padding:10px;
+        border: 2px solid red;
+        border-radius: 10px 0px 0px 0px;
+        font-size: 30px;
+    }
+    .message textarea{
+        height: 180px;
+    }
+    button{
+        color: white;
+        width: 180px;
+        height: 60px;
+        margin-top: 20px;
+        margin-left: 466.5px ;
+        background-color: black;
+        border: 2px solid red;
+        border-radius: 10px;
+        box-shadow: 0px 0px 7px red;
+        font-size: 30px;
+    }
+    button:hover{
+        margin-top: 15px ;
+        background-color: red;
+    }
+  }
+  
